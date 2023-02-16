@@ -48,10 +48,59 @@
    ```
 
 ### 4. Status, Add, Commit
+   - Check the "status" of files
+   ```sh
+   git status
+   ```
+   - Add files to the staging area
+   ```sh
+   git add folder/file.txt
+   ```
+   > Or you can use ```git add .``` to add all the files in your working directory to the staging area
+   - Commit your changes into the repo
+   ```sh
+   git commit -m "your commit message here"
+   ```
+   > If you have a really big commit message you think will need more than 1 line, just use ```git commit``` and you will be directed to your editor, where you can write your "big" commit message.
+   >> Had to give this extra side note... a lot of you during the setup of git would have chosen vi/vim as your default editor(that's the default settings), and might find it a little hard to work with. **The memes are real**  
+   ![A vim meme comes here](https://preview.redd.it/seriously-though-how-do-i-exit-vim-v0-mx7dxqljnnl81.png?auto=webp&s=03f895ee50952918687dfdfea03c0bc3af097754)
+   Fret not if you don't see what you're typing on the screen... you're just in the esc mode. Type ```i``` and you should be in insert mode now - you can start typing now. Once you're done, go back to esc mode by pressing the esc key. To save your changes to the file and exit, ```:wq```, if you don't want to save your changes, ```:q!```. Learn [vim](https://github.com/iggredible/Learn-Vim) pliz  
+### 5. Logging your commit history
+   ```sh
+   git log
+   ```
+   > Alternatively, to visualize it better, use ```git log --oneline --graph --all```
+
 ### 5. Push to remote
+   - Pushing your local changes to the remote 
+   ```sh
+   git push origin branch_name
+   ```
 ### 6. Pulling from the origin
+   - Pulling the changes from the remote
+   > It is a good practice to fetch your changes first, with ```git fetch --prune --all``` - this will fetch all the branches and clear any outdated branches on the remote.
+   ```sh
+   git pull origin branch_name
+   ```
 ### 7. Stash, pop
+   *Sometimes, you might be working on a file, and your friend has pushed a newer version of the file on the same branch as yours on the remote repo. You want to pull his changes and continue working on the given file.*     
+   You will encounter an error if you try to pull. So stash your changes, pull and then pop.
+   ```sh
+   git stash
+   ```
+   **&darr;**
+   ```sh
+   git pull origin branch_name
+   ```
+   **&darr;**
+   ```sh
+   git pop
+   ```
+   With this the files that both of you have made changes on should contain both versions of the code, enclosed in ```>>>>>>>``` and ```=======```... you can choose which changes to keep or keep a combination of them too.
+
 ### 8. Raising a PR
+   *After you've made a number of commits on your branch, you can **raise a PR** to merge it with the parent branch*   
+
 
 Here are some other useful links you might need:
 - [Git-Github for Poets](https://www.youtube.com/playlist?list=PLozRqGzj97d02YjR5JVqDwN2K0cAiT7VK)
