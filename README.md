@@ -64,7 +64,18 @@
    > If you have a really big commit message you think will need more than 1 line, just use ```git commit``` and you will be directed to your editor, where you can write your "big" commit message.
    >> Had to give this extra side note... a lot of you during the setup of git would have chosen vi/vim as your default editor(that's the default settings), and might find it a little hard to work with. **The memes are real**  
    ![A vim meme comes here](https://preview.redd.it/seriously-though-how-do-i-exit-vim-v0-mx7dxqljnnl81.png?auto=webp&s=03f895ee50952918687dfdfea03c0bc3af097754)
-   Fret not if you don't see what you're typing on the screen... you're just in the esc mode. Type ```i``` and you should be in insert mode now - you can start typing now. Once you're done, go back to esc mode by pressing the esc key. To save your changes to the file and exit, ```:wq```, if you don't want to save your changes, ```:q!```. Learn [vim](https://github.com/iggredible/Learn-Vim) pliz  
+   Fret not if you don't see what you're typing on the screen... you're just in the esc mode. Type ```i``` and you should be in insert mode now - you can start typing now. Once you're done, go back to esc mode by pressing the esc key. To save your changes to the file and exit, ```:wq```, if you don't want to save your changes, ```:q!```. Learn [vim](https://github.com/iggredible/Learn-Vim) pliz.  
+
+   *The convention we follow:*   
+   ```
+   feat: (addition of a new feature)   
+   rfac: (refactoring the code: optimization/ different logic of existing code - output doesn't change, just the way of execution changes)   
+   docs: (documenting the code, be it readme, or extra comments)   
+   bfix: (bug fixing)   
+   chor: (chore - beautifying code, indents, spaces, camelcasing, changing variable names to have an appropriate meaning)
+   ptch: (patches - small changes in code, mainly UI, for example color of a button, incrasing size of tet, etc etc)
+   conf: (configurational settings - changing directory structure, updating gitignore, add libraries, changing manifest etc) 
+   ``` 
 ### 5. Logging your commit history
    ```sh
    git log
